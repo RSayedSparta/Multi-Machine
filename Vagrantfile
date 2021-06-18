@@ -4,7 +4,7 @@ required_plugins.each do |plugin|
     exec "vagrant plugin install #{plugin}" unless Vagrant.has_plugin? plugin
 end
 
-
+  
 def set_env vars
   command = <<~HEREDOC
       echo "Setting Environment Variables"
