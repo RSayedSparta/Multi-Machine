@@ -3,7 +3,6 @@ Vagrant.configure("2") do |config|
      config.vm.define "app" do |app|
      app.vm.box = "ubuntu/xenial64"
      app.vm.network "private_network", ip: "192.168.10.100"
-     #app.hostsupdater.aliases = ["development.local"]
      app.vm.synced_folder "app", "/home/vagrant/app"
      app.vm.provision "shell", path: "app/install.sh"
    end
